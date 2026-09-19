@@ -31,3 +31,53 @@
         app:layout_constraintTop_toBottomOf="@id/tvLab1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!--水平Chain链，4个彩色TextView，权重都为1实现四等分，不嵌套LinearLayout-->
+    <TextView
+        android:id="@+id/tvThis"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:text="This"
+        android:gravity="center"
+        android:background="#ff0000"
+        app:layout_constraintTop_toBottomOf="@id/tvWhiteBlock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvIs"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
+    <TextView
+        android:id="@+id/tvIs"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:text="is"
+        android:gravity="center"
+        android:background="#0000ff"
+        app:layout_constraintTop_toBottomOf="@id/tvWhiteBlock"
+        app:layout_constraintStart_toEndOf="@id/tvThis"
+        app:layout_constraintEnd_toStartOf="@id/tvMy"
+        app:layout_constraintHorizontal_weight="1"/>
+
+    <TextView
+        android:id="@+id/tvMy"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:text="my"
+        android:gravity="center"
+        android:background="#8040b0"
+        app:layout_constraintTop_toBottomOf="@id/tvWhiteBlock"
+        app:layout_constraintStart_toEndOf="@id/tvIs"
+        app:layout_constraintEnd_toStartOf="@id/tvFirst"
+        app:layout_constraintHorizontal_weight="1"/>
+
+    <TextView
+        android:id="@+id/tvFirst"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:text="first"
+        android:gravity="center"
+        android:background="#ffff00"
+        app:layout_constraintTop_toBottomOf="@id/tvWhiteBlock"
+        app:layout_constraintStart_toEndOf="@id/tvMy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"/>
