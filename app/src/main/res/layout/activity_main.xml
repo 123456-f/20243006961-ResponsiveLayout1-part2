@@ -81,3 +81,18 @@
         app:layout_constraintStart_toEndOf="@id/tvMy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_weight="1"/>
+
+    <!--黑色大区域 Android Application，占剩余全部垂直空间-->
+    <TextView
+        android:id="@+id/tvBlackArea"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="Android Application"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:background="#000000"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/tvFirst"
+        app:layout_constraintBottom_toTopOf="@id/layoutButtons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
